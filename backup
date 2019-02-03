@@ -1,0 +1,2 @@
+
+find /home/mana/Temp/task2 -type f -mtime +10 -print0 | xargs -0 -n1 mv -vt /home/mana/Backup/
