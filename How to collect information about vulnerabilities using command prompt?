@@ -1,0 +1,4 @@
+curl -sL https://access.redhat.com/security/vulnerabilities/ \
+| grep -o "/sec.*td>" | sed -re 's:>|</a>|</td>::g' \
+| sed 's/\(^.*\)"\(.*\)/\2 \nhttps:\/\/access.redhat.com\1\n \
+*********************************************************/' | head -14
