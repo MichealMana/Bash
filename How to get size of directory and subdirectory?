@@ -1,0 +1,6 @@
+
+du -sh d1 /var/log
+
+or
+
+du -sh /var/*
