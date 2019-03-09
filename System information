@@ -1,0 +1,4 @@
+awk '/PRETTY_NAME/' /etc/os-release | sed -e 's/PRETTY_NAME="/OS: /;s/"//'
+grep m.*me /proc/cpuinfo -m1 | sed -r 's/m.*me.*:/CPU:/'
+awk '/MemTotal/{printf "Memory Size:  %.0f GB \n",  $2/1024/1024}' /proc/meminfo
+awk '{printf "Hard Disk: %.0f GB", $1* 512/1000/1000/1000}' /sys/block/sda/size
