@@ -1,0 +1,2 @@
+
+cat /etc/{hostname,lighttpd/conf-available/90-javascript-alias.conf} > /home/mana/new.txt
