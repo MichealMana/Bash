@@ -1,0 +1,19 @@
+#!/bin/bash
+
+while read name
+do 
+echo -n "$name-->"
+(curl -Is $name | grep -i "location" &> /dev/null) && echo "host Up" || echo "host down" 
+done < host.txt
+
+$ cat host.txt 
+google.com
+facebook.com
+twitter.com
+tamilrockers.ca
+
+Output:
+google.com-->host Up
+facebook.com-->host Up
+twitter.com-->host Up
+tamilrockers.ca-->host down
