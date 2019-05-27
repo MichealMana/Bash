@@ -1,1 +1,1 @@
-egrep -r "def|class " /usr/lib/python3.6/datetime.py
+grep -rP "^def [a-zA-Z].*|class.*:$|^\s{1,}def [a-zA-Z].*" /usr/lib/python3.6/datetime.py | sed -r 's/def|://g'
