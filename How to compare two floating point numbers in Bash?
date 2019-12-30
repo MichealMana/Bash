@@ -1,0 +1,8 @@
+num1=6.2
+num2=4.5
+
+if (( $(awk -v n1="$num1" -v n2="$num2" 'BEGIN {print (n1 >= n2)}') )); then
+    echo "yes"
+else 
+    echo "no"
+fi
