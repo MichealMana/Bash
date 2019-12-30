@@ -1,0 +1,8 @@
+cpu_load=$(uptime | awk -F "load average:" '{print $2}' | awk -F "," '{print $1}')
+cpu_count=$(awk '/processor/{p++} END {print p}' /proc/cpuinfo)
+
+if (( $(awk -v n1="$cpu_load" -v n2="$cpu_count" 'BEGIN {print (n1 >= n2)}') )); then
+    echo "Server going critical stage."
+else 
+    echo "Server running smooth."
+fi
