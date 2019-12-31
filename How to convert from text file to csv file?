@@ -1,0 +1,4 @@
+while read line
+do
+echo $line | sed 's/\s/,/g'
+done < /home/mana/Work/user.txt > /home/mana/Work/user.csv
