@@ -1,0 +1,8 @@
+value=$(cat /proc/sys/net/ipv4/icmp_echo_ignore_all)
+
+if (($value == 0))
+then
+echo "ICMP protocol enabled."
+else
+echo "ICMP protocol disabled."
+fi
