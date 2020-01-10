@@ -1,0 +1,4 @@
+echo "Follwing files are reomoved:"
+find /home/mana/Work/ -maxdepth 1 -type f \
+\( -name "*zip" -o -name "*tar" -o -name "*gz" \) \
+-size +10M -printf "%f\n" -delete
