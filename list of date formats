@@ -1,0 +1,1 @@
+date --help | grep -Po "\s{2}%.*"
