@@ -1,0 +1,1 @@
+find /home/mana/Work/ -type f -name "*.txt" -mtime +7 -exec rm -v {} \;
