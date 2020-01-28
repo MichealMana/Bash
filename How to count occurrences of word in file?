@@ -1,0 +1,2 @@
+egrep -o "\w+" /home/mana/Work/data.txt | sort | uniq -c \
+| awk '{print $2, $1}' | column -t
