@@ -1,0 +1,2 @@
+
+grep -o "$(hostname).*" /var/log/syslog | sort | uniq -c | sort -rnk1 | head -5
