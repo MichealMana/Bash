@@ -1,0 +1,1 @@
+awk -F ":" '/nologin$/{print $1}' <<< $(getent passwd)
