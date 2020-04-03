@@ -1,0 +1,3 @@
+systemctl --type=service | sed -n '/service/p' | \
+sed -rn 's/(^.*)loaded.*(running|exited|failed)(.*)/\1, \2/p'| \
+sort -rk3 > ~/Work/status.csv
