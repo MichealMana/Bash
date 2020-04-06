@@ -1,4 +1,4 @@
 
  $ awk '!/^#|udp/{print $1 "\t" $2}' /etc/services | column -t
  
- $ cat /e*/s*s | grep -Po "^\w+.*\d{1,5}/tcp"
+ $ grep -Po "^\w+.*\d{1,5}/tcp" /etc/services | column -t
