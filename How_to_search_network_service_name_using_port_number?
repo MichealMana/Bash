@@ -1,0 +1,3 @@
+read -p "Enter Port Number: " port
+grep "\s$port/tcp" /etc/services | awk -v p=$port \
+' {print p,"-->", $1}'
