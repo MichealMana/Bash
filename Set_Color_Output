@@ -1,0 +1,30 @@
+
+Set single Line:
+echo  $'\e[35;mTR COMMAND:\e[m'
+
+Set trailing Line:
+echo  $'\e[35;mTR COMMAND:'
+
+This is another way:
+The first line makes bold:
+
+ echo -e "\x1b[1m bold"
+     echo -e "\x1b[30m black"
+     echo -e "\x1b[31m red"
+     echo -e "\x1b[32m green"
+     echo -e "\x1b[33m yellow"
+     echo -e "\x1b[34m blue"
+     echo -e "\x1b[35m mag"
+     echo -e "\x1b[36m cyan"
+     echo -e "\x1b[37m white"   
+For the general type, I only know
+
+echo -e "\x1b[0m io-std"
+echo -e "\x1b[1m bold"
+echo -e "\x1b[2m normal"
+and from the comments, thanks manatwork and GypsyCosmonaut:
+
+echo -e "\x1b[3m italic"
+echo -e "\x1b[4m underlined"
+echo -e "\x1b[5m blinking"
+echo -e "\x1b[7m inverted"
