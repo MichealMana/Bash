@@ -1,0 +1,16 @@
+fstab_mount=( $( awk '/^UUID|^\/dev/ && !/none/ {print $2}' \
+/etc/fstab ) )
+current_mount=$( mount | awk '/^\/.*/{print $3}')
+
+for i in ${fstab_mount[@]}
+do
+if [[ "$current_mount" != *"$i"* ]]
+then
+grep "$i" /etc/fstab | awk '{print "Device "$1,"not mounted on",$2}'
+out='fail'
+fi
+done
+if [ -z $out ] 
+then
+echo "All Disks Are Mounted Correctly."
+fi
