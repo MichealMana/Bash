@@ -1,0 +1,3 @@
+echo "Device,Mount-Point,FS-Type,Options,Dump,Pass-Num"\
+> fstab.csv
+grep "^UUID.*" /etc/fstab | sed -r 's/\s+/,/g'>> fstab.csv
