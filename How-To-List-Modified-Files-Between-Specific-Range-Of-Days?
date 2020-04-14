@@ -1,0 +1,1 @@
+find /home/mana/Work/ -type f -newermt 20200408 \! -newermt 20200410
